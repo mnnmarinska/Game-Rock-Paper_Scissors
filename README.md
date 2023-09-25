@@ -10,11 +10,15 @@ computer_options = ['rock', 'paper', 'scissors']
 while True:
     if computer_counter < 4 or player_counter < 4:
         player_choice = input("Your choice is: ")
+        if player_choice != ['rock', 'paper', 'scissors']:
+            print("Wrong command! Try again!")
+            continue
         computer_choice = random.choice(computer_options)
         print(f"Computer choice is: {computer_choice}")
 
         if player_choice == computer_choice:
             print("Draw! Try again!")
+
 
         elif player_choice == 'rock' and computer_choice == 'paper':
             print("Computer won!")
