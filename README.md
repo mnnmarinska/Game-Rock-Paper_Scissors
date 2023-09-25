@@ -1,4 +1,3 @@
-# Game-Rock-Paper_Scissors
 import random
 
 computer_counter = 0
@@ -29,17 +28,17 @@ while True:
         elif player_choice == 'scissors' and computer_choice == 'rock':
             print("Computer won!")
             computer_counter += 1
-        elif player_choice == 'rock' and computer_choice == 'paper':
+        elif player_choice == 'paper' and computer_choice == 'rock':
             print("Computer won!")
             computer_counter += 1
-        elif player_choice == 'rock' and computer_choice == 'scissors':
+        elif player_choice == 'paper' and computer_choice == 'scissors':
             print("You won!")
             player_counter += 1
 
-    if computer_counter == 3:
-        print("Sorry! Computer won the game!")
-    elif player_counter == 3:
-        print("Congratulations! You won the game!")
-        break
+        if computer_counter == 3:
+            print("Sorry! Computer won the game!")
+        elif player_counter == 3:
+            print("Congratulations! You won the game!")
+            break
 
 
